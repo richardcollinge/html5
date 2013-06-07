@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EaselJS demo: Inheritance</title>
+	<link href="stylesStretch.css" rel="stylesheet" type="text/css">
+    <link href="jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+     
+
+</head>
+<body onLoad="initCanvas();">
+
+
+        
+      
+        
+        
+ <div id="wrapper" class="wrapperNormal">
+
+ 
+ 		<div id="Abstract" style="z-index: 1; position: absolute;  width:500px; height:260px; padding: 5px; visibility: hidden;">
+        <h1>ABSTRACT</h1>
+	The New England Journal of Medicine (NEJM) has the highest impact factor of all general medical journals (53.48 based on 2010 metrics) and a print circulation of almost 150000.  In addition, the NEJM  provides free online access to its archived research articles from 6 months after publication. Consequently, because of its 'impact' and 'reach', the NEJM is an attractive target for article publication. 
+<br> <br> 
+Wager et al (PLoS ONE 2010; 5[10]: e13591) showed that the NEJM published more randomized controlled trials (RCTs) solely funded by industry than other 'top-tier' general medical journals, such as the Journal of the American Medical Association (~30 vs 15 manuscripts/year [2002–2008], respectively). 
+<br> <br> 
+
+			<a href="http://easeljs.com/">This is a link</a>
+		</div>
+        
+         		<div id="Play a video" style="z-index: 1; position: absolute;  width:600px; height:350px; padding: 5px; visibility: hidden;">
+                       <h1>Play a video</h1>
+This is an example of an html5 video playing over the canvas
+
+  <div id ="introVideo">
+<video id ="video1" controls = "controls"   width="320" height="240" >
+<source src="video/Communique_AR.mp4" type ="video/mp4"/>
+<source src="video/Communique_AR.theora.ogv" type="video/ogg" />
+<source src="video/Communique_AR.webmvp8" type="video/ogg" />
+</video>
+
+		</div>
+  
+  </div>
+  
+        
+        <div id="Scrolling"   style="z-index: 1; position: absolute;  width:400px; height:360px; padding: 5px; visibility:hidden;">
+               <h1>Scrolling list</h1>
+        Articles from all print issues of the NEJM published between January 1, 2011 and December 31, 2011 were listed from the individual issue pages of the NEJM website and downloaded from PubMed.  The listing from each source was compared against the other to compile a single complete listing.  
+
+Any articles that appeared as a 2011 ‘Epub ahead of print’, but did not appear in print in the 2011 issues of NEJM were not included.  Articles that were 2010 ‘Epub ahead of print’, but appeared in print in 2011, were included in the analysis.
+
+RCTs were identified based on study title and methodology; the analysis was not reliant on MedLine indexing of studies.  RCTs were then classified as:
+<ul>
+   <li>   Industry-funded </li>
+     <li>  Jointly industry/non-commercial funded</li> 
+     <li>  Industry-supported (when manufacturers provided materials or funding through a 
+     <li>  research grant only)</li>
+     <li>  Non-commercial </li>
+     <li>  No funding/funding not stated.</li>
+</ul>
+The profiles of industry-funded RCTs were further characterized based on industry funder, number of patients randomized, disease and therapy area under investigation.
+
+        Articles from all print issues of the NEJM published between January 1, 2011 and December 31, 2011 were listed from the individual issue pages of the NEJM website and downloaded from PubMed.  The listing from each source was compared against the other to compile a single complete listing.  
+
+Any articles that appeared as a 2011 ‘Epub ahead of print’, but did not appear in print in the 2011 issues of NEJM were not included.  Articles that were 2010 ‘Epub ahead of print’, but appeared in print in 2011, were included in the analysis.
+
+RCTs were identified based on study title and methodology; the analysis was not reliant on MedLine indexing of studies.  RCTs were then classified as:
+<ul>
+   <li>   Industry-funded </li>
+     <li>  Jointly industry/non-commercial funded</li> 
+     <li>  Industry-supported (when manufacturers provided materials or funding through a 
+     <li>  research grant only)</li>
+     <li>  Non-commercial </li>
+     <li>  No funding/funding not stated.</li>
+</ul>
+The profiles of industry-funded RCTs were further characterized based on industry funder, number of patients randomized, disease and therapy area under investigation.
+        </div>
+        
+                <div id="Pinch" style="z-index: 1; position: absolute; width:500px; height:260px; padding: 5px; visibility: hidden;">
+               <h1>Pinch</h1>
+               
+               The analysis identified 1412 individual NEJM citations published in print in 2011.
+
+In total, 120 articles were classified as RCT (one reported in a letter, and 119 in full original articles).  Of these, 41/120 (34%) were industry-funded (Figure 1), compared with approximately 30 industry-funded RCTs/year between 2002 and 2008 based on historical data (Wager et al, 2010).
+        </div>
+        
+                <div id="Sound" style="z-index: 1; position: absolute; width:500px; height:260px; padding: 5px; visibility: hidden;">
+               <h1>Sound</h1>
+               
+               Although no strong correlations between chance of publication in the NEJM and specific factors that may impact acceptance were observed, some interesting points were noted.
+               
+            <ul><li>   The majority (76%) of these articles related to Phase III RCTs for a pharmaceutical or biological intervention and 48% included >1000 study participants </li>
+
+<li> Approximately one-quarter of industry-funded RCTs published in the NEJM in 2011 appeared ±4 months of FDA approval; the therapy area focus in any given year of the NEJM is likely to be influenced by upcoming drug approvals within that year</li>
+
+<li> Although time from study completion to publication varied widely, a good proportion of RCTs (56%) were published within 12 months of study completion.</li>
+        </div>
+        
+  <canvas id="demoCanvas" class="canvasNormal"  width="1920" height="1260" >
+	
+		<!-- SWFObject's dynamic embed method replaces this alternative HTML content for Flash content when enough JavaScript and Flash plug-in support is available. -->
+      
+		<div id="flashContent" style="visibility: hidden;">
+			<a href="http://www.adobe.com/go/getflash">
+				<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+			</a>
+			<p>This page requires Flash Player version 10.3.0 or higher.</p>
+		</div>
+	</canvas>
+    </div>
+    
+     <script src="js/libs/modernizr.js"></script>
+
+     		<script type="text/javascript">
+
+			function initCanvas(canvas) {
+				
+       
+				if(Modernizr.canvas){
+				console.log("Canvas is supported");
+		      $("#flashContent").hide();
+				initMain();
+				}else{
+            console.log("Canvas is not supported");
+			// $("#flashContent").show();
+				//flash content to go here
+				}
+				
+			}
+/*
+window.addEventListener("resize", OnResizeCalled, false);
+
+function OnResizeCalled() {
+			///resize script
+			console.log("ewsizing")
+var gameWidth = window.innerWidth;
+var gameHeight = window.innerHeight;
+var scaleToFitX = gameWidth / 960;
+var scaleToFitY = gameHeight / 540;
+
+var currentScreenRatio = gameWidth / gameHeight;
+var optimalRatio = Math.min(scaleToFitX, scaleToFitY);
+
+if(canvas.style.width>960){
+if (currentScreenRatio >= 1.77 && currentScreenRatio <= 1.79) {
+    canvas.style.width = gameWidth + "px";
+    canvas.style.height = gameHeight + "px";
+}
+else {
+    canvas.style.width = 960 * optimalRatio + "px";
+    canvas.style.height = 540 * optimalRatio + "px";
+}
+}
+
+}
+	*/		
+
+			</script>
+            
+             <!--[if !(lt IE 9)]><!-->       
+     <script src="js/libs/jquery-1.8.2.min.js"></script>
+     <script src="js/libs/easeljs-0.5.0.min.js"></script>  
+     <script src="js/libs/preloadjs-0.2.0.min.js"></script>
+     <script src="js/libs/tweenjs-0.3.0.min.js"></script>	
+     <script src="js/libs/TweenLite.min.js"></script>
+     <script src="js/libs/EasePack.min.js"></script>
+     <script src="js/libs/jquery.touchSwipe.min.js"></script> 
+          
+     <script src="js/MainRetina.js"></script>
+     <script src="js/deviceOrientation.js"></script>
+     <script src="js/preloadRetina.js"></script>
+    
+     <script src="js/textClass.js"></script>
+	 <script src="js/Button.js"></script>
+     <script src="js/circleClass.js"></script>
+     <script src="js/DockMenu.js"></script>
+     <script src="js/Icon.js"></script>
+     <script src="js/pinchImage.js"></script>
+<!--<![endif]-->
+    
+     <!--[if !(lt IE 9)]><!-->
+   <script src="js/libs/jquery.mCustomScrollbar.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script src="js/libs/jquery.mousewheel.min.js"></script>
+<script src="js/libs/jquery.mCustomScrollbar.js"></script>
+ <script>
+    (function($){
+        $(window).load(function(){
+            $("#Scrolling").mCustomScrollbar();
+        });
+    })(jQuery);
+</script>
+<!--<![endif]-->
+</body>
+</html>

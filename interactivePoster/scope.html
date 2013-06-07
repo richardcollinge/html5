@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="styles.css" rel="stylesheet" type="text/css">
+ <script src="js/libs/jquery-1.8.2.min.js"></script>
+	<script src="js/libs/easeljs-0.5.0.min.js"></script>
+      <script src="js/libs/TweenLite.min.js"></script>
+    <script src="js/pinchImage.js"></script>
+    <script src="js/image.js"></script>
+    <script>
+	function init(){
+	var canvas = document.getElementById("demoCanvas");
+	var stage = new createjs.Stage(canvas);
+	createjs.Touch.enable(stage);
+	var containerMC = new createjs.Container();
+   // var Car =containerMC.addChild(new pinchImage("Ford","Fiesta","black"));
+	var textureBG= containerMC.addChild(new image(0,0,"assets/tex.png", true,0,true));
+	//Car.startEngine();
+	//console.log(Car.mpg);//get public var from the scope class
+	//console.log(pinchImage.num_of_wheels);//get static var from the scope class
+	stage.update();//updates the stage	
+	}
+    
+    </script>
+<title>Untitled Document</title>
+</head>
+
+<body onload="init()">
+
+ <div id="wrapper" class="wrapperNormal">
+  <canvas id="demoCanvas" class="canvasNormal" width="960" height="540"  >
+	
+
+	</canvas>
+    </div>
+</body>
+</html>

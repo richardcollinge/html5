@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>EaselJS Example: DOMElement Example</title>
+
+	<link href="demoStyles.css" rel="stylesheet" type="text/css" />
+
+	<script src="js/libs/easeljs-0.5.0.min.js"></script>
+
+	<!-- We also provide hosted minified versions of all CreateJS libraries.
+	  http://code.createjs.com -->
+
+	<script>
+	var stage;
+
+	function init() {
+		// create a new stage and point it at our canvas:
+		canvas = document.getElementById("testCanvas");
+		stage = new createjs.Stage(canvas);
+
+		var container = new createjs.Container();
+		stage.addChild(container);
+
+		//var frame = new createjs.Shape();
+		//frame.graphics.beginFill("#fff").drawRect(0,0,340,280);
+		//frame.regX = 170;
+		//frame.regY = 140;
+
+		var content = new createjs.DOMElement("page1");
+		content.regX = 165;
+		content.regY = 135;
+		//content.visible = false;
+
+		var o = content.clone();
+		stage.addChild(o);
+
+		container.addChild(frame,content);
+		container.x = 300; container.y = 200;
+		container.alpha = 0.8;
+		container.rotation = 0;
+		container.scaleX = 1.5;
+		//container.visible = false;
+
+		stage.update();
+	}
+
+	</script>
+</head>
+
+<body onload="init();">
+
+
+
+	<div class="canvasHolder">
+		<div id="page1" style="z-index: 1; position: absolute; background-color: #FF0000; width:320px; height:260px; padding: 5px; visibility: hidden;">
+	The New England Journal of Medicine (NEJM) has the highest impact factor of all general medical journals (53.48 based on 2010 metrics) and a print circulation of almost 150000.  In addition, the NEJM  provides free online access to its archived research articles from 6 months after publication. Consequently, because of its ‘impact’ and ‘reach’, the NEJM is an attractive target for article publication. 
+<br> <br> 
+Wager et al (PLoS ONE 2010; 5[10]: e13591) showed that the NEJM published more randomized controlled trials (RCTs) solely funded by industry than other ‘top-tier’general medical journals, such as the Journal of the American Medical Association (~30 vs 15 manuscripts/year [2002–2008], respectively). 
+<br> <br> 
+Because of its characteristics, industry sponsors are often keen to submit manuscripts reporting the results of their clinical research to the NEJM.  However, the journal does have a very high rejection rate (~95% according to Journal Selector).  In order to provide industry sponsors with better evidence regarding the likelihood of acceptance in the NEJM, we profiled industry-funded RCTs published in the journal to evaluate any factors that may provide insights on successful manuscript submission.<br> <br> 
+			<a href="http://easeljs.com/">This is a link</a>
+		</div>
+		<canvas id="testCanvas" width="960" height="300"></canvas>
+	</div>
+
+
+</body>
+</html>

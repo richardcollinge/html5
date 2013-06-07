@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" >
+		<title>Tutorial: FullWindow canvas mode with CreateJS</title>
+
+		<script src="http://code.createjs.com/easeljs-0.4.2.min.js" >  </script>
+		<script src="http://code.createjs.com/tweenjs-0.2.0.min.js" >  </script>
+		<link rel="stylesheet" href="styles.css" >
+
+		<script>
+		var canvas,
+			wrapper,
+			stage,
+			shape,
+			fullWindowState;
+
+		
+		function init() {
+			canvas = document.getElementById("canvas");
+			wrapper = document.getElementById("wrapper");
+			
+			stage = new Stage(canvas);
+			
+			var g = new Graphics();
+			g.setStrokeStyle(1);
+			g.beginStroke(Graphics.getRGB(0,0,0));
+			g.beginFill(Graphics.getRGB(255,0,0));
+			g.drawCircle(0,0,100);
+			
+			shape = new Shape(g);
+			shape.x = 400;
+			shape.y = 300;
+			stage.addChild(shape);
+			
+			Ticker.setFPS(32);
+			Ticker.addListener(stage);
+			
+			animate();
+		}
+		
+		function animate(){
+			var tween;
+			tween = Tween.get(shape).to({x:Math.random()*canvas.width,y:Math.random()*canvas.height},1000,Ease.cubicOut).call(animate);
+		}
+		
+		function fullWindow(e) {
+			if (!fullWindowState) {
+				fullWindowState = true;
+				// Canvas goes full screen
+				canvas.className = "canvasFullWindow";
+				wrapper.className = "wrapperFullWindow";
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
+			}else{
+				fullWindowState = false;
+				//canvas goes normal
+				canvas.width = 800;
+				canvas.height = 600;
+				canvas.className = "canvasNormal";
+				wrapper.className = "wrapperNormal";
+			}
+		}
+		
+		window.onload = init;
+
+		</script>
+	</head>
+	 <body>
+		 <div id="wrapper" class="wrapperNormal">
+			<H1>Swap to FullWindow canvas mode with CreateJS </H1>
+			 <canvas id="canvas" class="canvasNormal" width="800" height="600" onclick="fullWindow(this)" >
+				<p>Your browser is sooooo old! Download a modern one now! </p>
+			 </canvas>
+		 </div>
+	</body>
+</html>

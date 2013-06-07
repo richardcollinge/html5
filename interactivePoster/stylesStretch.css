@@ -1,0 +1,131 @@
+BODY, HTML {
+	margin: 0;
+	padding: 0px;
+	font-family: 		futura;
+	font-size: 			12px;
+	font-weight:		normal;
+	color: 				#555;
+	overflow::hidden;
+	-webkit-transform : translateZ(0); 
+-o-transform : translateZ(0); 
+-moz-transform : translateZ(0); 
+transform : translateZ(0);	
+}
+
+/* Desktops and laptops ----------- */
+/* small screens ----------- */
+@media only screen 
+and (max-width : 1024px) {
+/* Styles */
+#demoCanvas 
+{
+	background-color: #cc6699;
+    width: 960px;
+    height: 630px;
+}
+}
+
+@media only screen 
+and (min-width : 1024px) {
+/* Styles */
+#demoCanvas 
+{
+	background-color: #cc6699;
+    width: 100%;
+    height: 100%;
+}
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+#demoCanvas 
+{
+	background-color: #00FF00;
+	width: 1024px;
+	height: 672px;
+}
+}
+
+
+
+<!--ipad retina-->
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5)
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  {
+#demoCanvas 
+{
+	background-color: #cccccc;
+    width: 1920px;
+    height: 1260px;
+}
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+
+
+
+
+
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+#demoCanvas 
+{
+	background-color: #000000;
+   
+}
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
